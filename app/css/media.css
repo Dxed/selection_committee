@@ -1,0 +1,22 @@
+@media(max-width: 1200px){
+	footer{
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+	}
+}
+@media (max-width: 900px){
+	.container{
+		width: 90%;
+	}
+	.header{
+		height: fit-content;
+	}
+	.header_content{
+		flex-direction: column-reverse;
+	}
+	.header_content h1{
+		padding: 2% 0;
+	}
+	
+}

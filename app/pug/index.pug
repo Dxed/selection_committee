@@ -1,0 +1,12 @@
+extends ./includes/template.pug
+block variables
+	-var title="Вход"
+block main_form
+	form.main_form.sign_in_form(method="POST")
+		fieldset
+			label(for="login") Логин
+			input#login(type="text")
+		fieldset
+			label(for="pass") Пароль
+			input#pass(type="password")
+		a.sign_in(href="main_page.html") Войти   

@@ -1,0 +1,128 @@
+/*общие стили*/
+@import font.css;
+html{
+	font-size: 16px;
+}
+*{
+	font-family: "Arial";
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+
+a, button{
+	background-color:  #444444;
+	padding: 2% 10%;
+	border-radius: 2vh;
+	font-size: 3vw;
+	font-weight: bold;
+	border: 3px solid #444444;
+	transition: 0.5s;
+	text-decoration: none;
+	color: #F20606;
+}
+
+a:hover, button:hover{
+	border-color: #F20606;
+	cursor: pointer;
+	background-color: #242424;
+
+}
+.container{
+	max-width: 1680px;
+	width: 80%;
+	margin: 0 auto;
+}
+img { 
+	max-width: 100%;
+
+}
+
+/*стили для шапки*/
+header{
+	background-color: #F2F2F2;
+	
+}
+.header_content{
+	
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 4% 0;
+}
+
+.header_content h1{
+	font-size: 4vw;
+	font-weight: normal;
+}
+
+
+/*стили для секции входа*/
+.sign_in{
+	margin-top: 5%;
+}
+.sign_in_content{
+	display: flex;
+	align-items: center;
+
+}
+
+.sign_in h2{
+	font-size: 3vw;
+	font-weight: normal;
+	margin: 0 auto;
+}
+.sign_in span{
+	font-weight: bold;
+}
+
+/*стили для формы*/
+.main_form{
+	background-color: #F2F2F2;
+	border-radius: 5vw;
+	border: 5px solid black;
+	padding: 5% 8%;
+	margin: 5%;
+}
+.main_form a{
+	display: block;
+
+	margin: 5% auto;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+/*стили для подвала сайта*/
+footer{
+	height: 120px;
+	background-color: #444444;
+}
+
+/*стили для полей*/
+label{
+	font-size: 2.5vw;
+}
+input{
+	font-size: 2.5vw;
+	border-radius: 1vw;
+	border: 3px solid black;
+	outline: none;
+	padding: 1% 4%;
+	width: 60%;
+}
+button{
+	display: block;
+	margin: 0 auto;
+}
+fieldset{
+	margin:5% 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+/*стили для формы входа*/
+.sign_in_form fieldset{
+	border: none;
+}
