@@ -3,4 +3,27 @@ block variables
 	-var title="Добавление нового студента"
 block main_form
 	form.main_form
-		h2 Новый студент
+		fieldset
+			legend Личное дело
+			label(for="id") Личное дело №
+			input#id(type="number")
+			label(for="data_create") Дата открытия
+			input#data_create(type="date") 
+		fieldset
+			legend Специальность
+			label(for="prof") Специальность
+			select#prof
+				option Парикмахер
+				option Портной
+			label(for="#kurs") Курсовое обучение 
+			// уточнить
+			input#kurs(type="text")
+			label(for="duration") Длительность обучения
+			input#durartion(type="number")
+		fieldset
+			label(for="name") Имя
+			input#name(type="text")
+			label(for="soname") Фамилия
+			input#soname(type="text")
+			label(for="second_name") Отчество
+			input#second_name(type="text")

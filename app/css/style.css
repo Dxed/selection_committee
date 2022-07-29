@@ -104,13 +104,14 @@ footer{
 label{
 	font-size: 2.5vw;
 }
-input{
+input, select {
 	font-size: 2.5vw;
 	border-radius: 1vw;
 	border: 3px solid black;
 	outline: none;
 	padding: 1% 4%;
 	width: 60%;
+	margin: 2% 0;
 }
 button{
 	display: block;
@@ -120,7 +121,16 @@ fieldset{
 	margin:5% 0;
 	display: flex;
 	align-items: center;
+	border: 2px solid black;
+	border-radius: 1vw;
 	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 2%;
+}
+legend{
+	font-size: 2vw;
+	font-weight: bold;
+	color: #F20606;
 }
 /*стили для формы входа*/
 .sign_in_form fieldset{

@@ -29,7 +29,34 @@
         <section class="form">
           <div class="container">
             <form class="main_form">
-              <h2>Новый студент</h2>
+              <fieldset>
+                <legend>Личное дело</legend>
+                <label for="id">Личное дело №</label>
+                <input id="id" type="number">
+                <label for="data_create">Дата открытия</label>
+                <input id="data_create" type="date">
+              </fieldset>
+              <fieldset>
+                <legend>Специальность</legend>
+                <label for="prof">Специальность</label>
+                <select id="prof">
+                  <option>Парикмахер</option>
+                  <option>Портной</option>
+                </select>
+                <label for="#kurs">Курсовое обучение </label>
+                <!-- уточнить-->
+                <input id="kurs" type="text">
+                <label for="duration">Длительность обучения</label>
+                <input id="durartion" type="number">
+              </fieldset>
+              <fieldset>
+                <label for="name">Имя</label>
+                <input id="name" type="text">
+                <label for="soname">Фамилия</label>
+                <input id="soname" type="text">
+                <label for="second_name">Отчество</label>
+                <input id="second_name" type="text">
+              </fieldset>
             </form>
           </div>
         </section>
