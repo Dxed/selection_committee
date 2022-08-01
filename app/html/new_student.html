@@ -31,33 +31,89 @@
             <form class="main_form">
               <fieldset>
                 <legend>Личное дело</legend>
-                <label for="id">Личное дело №</label>
-                <input id="id" type="number">
-                <label for="data_create">Дата открытия</label>
-                <input id="data_create" type="date">
+                <p class="field">
+                  <label for="id">Личное дело №</label>
+                  <input id="id" type="number">
+                </p>
+                <p class="field">
+                  <label for="data_create">Дата открытия</label>
+                  <input id="data_create" type="date">
+                </p>
               </fieldset>
               <fieldset>
                 <legend>Специальность</legend>
-                <label for="prof">Специальность</label>
-                <select id="prof">
-                  <option>Парикмахер</option>
-                  <option>Портной</option>
-                </select>
-                <label for="#kurs">Курсовое обучение </label>
-                <!-- уточнить-->
-                <input id="kurs" type="text">
-                <label for="duration">Длительность обучения</label>
-                <input id="durartion" type="number">
+                <p class="field">
+                  <label for="prof">Специальность</label>
+                  <select id="prof">
+                    <option>Парикмахер</option>
+                    <option>Портной</option>
+                  </select>
+                </p>
+                <p class="field">
+                  <label for="#kurs">Курсовое обучение </label>
+                  <!-- уточнить-->
+                  <input id="kurs" type="text">
+                </p>
+                <p class="field">
+                  <label for="duration">Длительность обучения</label>
+                  <input id="durartion" type="number">
+                </p>
               </fieldset>
               <fieldset>
-                <label for="name">Имя</label>
-                <input id="name" type="text">
-                <label for="soname">Фамилия</label>
-                <input id="soname" type="text">
-                <label for="second_name">Отчество</label>
-                <input id="second_name" type="text">
+                <legend>Общие данные</legend>
+                <p class="field">
+                  <label for="name">Имя</label>
+                  <input id="name" type="text">
+                </p>
+                <p class="field">
+                  <label for="soname">Фамилия</label>
+                  <input id="soname" type="text">
+                </p>
+                <p class="field">
+                  <label for="second_name">Отчество</label>
+                  <input id="second_name" type="text">
+                </p>
+                <p class="field">
+                  <label for="date_birth">Дата рождения</label>
+                  <input id="date_birth" type="date">
+                </p>
+                <p class="field">
+                  <label for="pasport">Серия и номер паспорта</label>
+                  <input id="pasport" type="text">
+                </p>
+                <p class="field">
+                  <label for="pasport_where">Где и кем выдан</label>
+                  <input id="pasport_where" type="text">
+                </p>
+                <p class="field">
+                  <label for="inn">ИНН</label>
+                  <input id="inn" type="number">
+                </p>
+                <p class="field">
+                  <label for="phone">Телефон</label>
+                  <input id="phone" type="text">
+                </p>
+              </fieldset>
+              <fieldset>
+                <legend>Образование</legend>
+                <p class="field">
+                  <label for="school">Школа</label>
+                  <input id="school" type="text">
+                </p>
+                <p class="field">
+                  <label for="year_end">Год окончания</label>
+                  <input id="year_end" type="number">
+                </p>
+                <p class="field">
+                  <label for="other_edu">Другое образование</label>
+                  <input id="other_edu" type="checkbox">
+                </p>
               </fieldset>
             </form>
+            <script src="../script/jquery-3.6.0.min.js"></script>
+            <script type="text/javascript" src="../script/jquery.maskedinput-1.2.2.js"></script>
+            <script src="../script/mask-script.js"></script>
+            <script src="../script/main.js"></script>
           </div>
         </section>
       </section>

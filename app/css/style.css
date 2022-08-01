@@ -16,7 +16,7 @@ a, button{
 	background-color:  #444444;
 	padding: 2% 10%;
 	border-radius: 2vh;
-	font-size: 3vw;
+	font-size: 2vw;
 	font-weight: bold;
 	border: 3px solid #444444;
 	transition: 0.5s;
@@ -54,7 +54,7 @@ header{
 }
 
 .header_content h1{
-	font-size: 4vw;
+	font-size: 3vw;
 	font-weight: normal;
 }
 
@@ -70,7 +70,7 @@ header{
 }
 
 .sign_in h2{
-	font-size: 3vw;
+	font-size: 2vw;
 	font-weight: normal;
 	margin: 0 auto;
 }
@@ -102,16 +102,16 @@ footer{
 
 /*стили для полей*/
 label{
-	font-size: 2.5vw;
+	font-size: 1.5vw;
 }
-input, select {
-	font-size: 2.5vw;
+input, select, input[type=checkbox] {
+	font-size: 1.5vw;
 	border-radius: 1vw;
 	border: 3px solid black;
 	outline: none;
 	padding: 1% 4%;
 	width: 60%;
-	margin: 2% 0;
+	
 }
 button{
 	display: block;
@@ -119,18 +119,20 @@ button{
 }
 fieldset{
 	margin:5% 0;
-	display: flex;
-	align-items: center;
 	border: 2px solid black;
 	border-radius: 1vw;
-	justify-content: space-between;
-	flex-wrap: wrap;
 	padding: 2%;
 }
 legend{
-	font-size: 2vw;
+	font-size: 1.5vw;
 	font-weight: bold;
 	color: #F20606;
+}
+.field{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 2% 0;
 }
 /*стили для формы входа*/
 .sign_in_form fieldset{

@@ -5,25 +5,65 @@ block main_form
 	form.main_form
 		fieldset
 			legend Личное дело
-			label(for="id") Личное дело №
-			input#id(type="number")
-			label(for="data_create") Дата открытия
-			input#data_create(type="date") 
+			p.field
+				label(for="id") Личное дело №
+				input#id(type="number")
+			p.field
+				label(for="data_create") Дата открытия
+				input#data_create(type="date") 
 		fieldset
 			legend Специальность
-			label(for="prof") Специальность
-			select#prof
-				option Парикмахер
-				option Портной
-			label(for="#kurs") Курсовое обучение 
-			// уточнить
-			input#kurs(type="text")
-			label(for="duration") Длительность обучения
-			input#durartion(type="number")
+			p.field
+				label(for="prof") Специальность
+				select#prof
+					option Парикмахер
+					option Портной
+			p.field
+				label(for="#kurs") Курсовое обучение 
+				// уточнить
+				input#kurs(type="text")
+			p.field
+				label(for="duration") Длительность обучения
+				input#durartion(type="number")
 		fieldset
-			label(for="name") Имя
-			input#name(type="text")
-			label(for="soname") Фамилия
-			input#soname(type="text")
-			label(for="second_name") Отчество
-			input#second_name(type="text")
+			legend Общие данные
+			p.field
+				label(for="name") Имя
+				input#name(type="text")
+			p.field
+				label(for="soname") Фамилия
+				input#soname(type="text")
+			p.field
+				label(for="second_name") Отчество
+				input#second_name(type="text")
+			p.field
+				label(for="date_birth") Дата рождения
+				input#date_birth(type="date")
+			p.field
+				label(for="pasport") Серия и номер паспорта
+				input#pasport(type="text")
+			p.field
+				label(for="pasport_where") Где и кем выдан
+				input#pasport_where(type="text")
+			p.field
+				label(for="inn") ИНН
+				input#inn(type="number")
+			p.field
+				label(for="phone") Телефон
+				input#phone(type="text")
+		fieldset
+			legend Образование
+			p.field
+				label(for="school") Школа
+				input#school(type="text")
+			p.field
+				label(for="year_end") Год окончания
+				input#year_end(type="number")
+			p.field
+				label(for="other_edu") Другое образование
+				input#other_edu(type="checkbox")
+
+	script(src="../script/jquery-3.6.0.min.js")
+	script(type="text/javascript",src="../script/jquery.maskedinput-1.2.2.js")
+	script(src="../script/mask-script.js")
+	script(src="../script/main.js")
