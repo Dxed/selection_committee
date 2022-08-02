@@ -5,63 +5,99 @@ block main_form
 	form.main_form
 		fieldset
 			legend Личное дело
-			p.field
+			div.field
 				label(for="id") Личное дело №
 				input#id(type="number")
-			p.field
+			div.field
 				label(for="data_create") Дата открытия
 				input#data_create(type="date") 
 		fieldset
 			legend Специальность
-			p.field
+			div.field
 				label(for="prof") Специальность
 				select#prof
 					option Парикмахер
 					option Портной
-			p.field
+			div.field
 				label(for="#kurs") Курсовое обучение 
 				// уточнить
 				input#kurs(type="text")
-			p.field
+			div.field
 				label(for="duration") Длительность обучения
 				input#durartion(type="number")
 		fieldset
 			legend Общие данные
-			p.field
+			div.field
 				label(for="name") Имя
 				input#name(type="text")
-			p.field
+			div.field
 				label(for="soname") Фамилия
 				input#soname(type="text")
-			p.field
+			div.field
 				label(for="second_name") Отчество
 				input#second_name(type="text")
-			p.field
+			div.field
 				label(for="date_birth") Дата рождения
 				input#date_birth(type="date")
-			p.field
+			div.field
 				label(for="pasport") Серия и номер паспорта
 				input#pasport(type="text")
-			p.field
+			div.field
 				label(for="pasport_where") Где и кем выдан
 				input#pasport_where(type="text")
-			p.field
+			div.field
 				label(for="inn") ИНН
 				input#inn(type="number")
-			p.field
+			div.field
 				label(for="phone") Телефон
 				input#phone(type="text")
 		fieldset
 			legend Образование
-			p.field
+			div.field
 				label(for="school") Школа
 				input#school(type="text")
-			p.field
+			div.field
 				label(for="year_end") Год окончания
 				input#year_end(type="number")
-			p.field
+			div.field
 				label(for="other_edu") Другое образование
 				input#other_edu(type="checkbox")
+			div.field#other_edu_field
+				label(for="other_edu") Укажите заведение
+				input#other_edu(type="text")
+		fieldset
+			legend Адрес
+			div.field
+				label(for="adres_reg") Адрес регистрации
+				input#adres_reg(type="text")
+			div.field 
+				label(for="adres_match") Совпадают
+				input#adres_match(type="checkbox")
+			div.field#adres_fact_fied
+				label(for="adres_fact") Адрес проживания
+				input#adres_fact(type="text")
+		fieldset
+			legend Доп данные
+			div.field 
+				label(for="preivileges") Льготы
+				input#preivileges(type="text")
+			div.field 
+				label(for="sport") Группа физкультуры
+				select#sport
+					option Основная (1)
+					option Подготовительная (2)
+					option Специальная (3)
+			div.field 
+				label Общежитие
+				div.dop_field
+					label(for="hostel_yesl") Да
+					input#hostel_yes(type="radio", name="hostel")
+					label(for="hostel_no") Нет
+					input#hostel_no(type="radio", name="hostel")
+			div.field 
+				label(for="hobbie") Увлечения
+				textarea#hobbie(placeholder="Интересы, предпочтения и т.д.")
+
 
 	script(src="../script/jquery-3.6.0.min.js")
 	script(type="text/javascript",src="../script/jquery.maskedinput-1.2.2.js")

@@ -31,83 +31,130 @@
             <form class="main_form">
               <fieldset>
                 <legend>Личное дело</legend>
-                <p class="field">
+                <div class="field">
                   <label for="id">Личное дело №</label>
                   <input id="id" type="number">
-                </p>
-                <p class="field">
+                </div>
+                <div class="field">
                   <label for="data_create">Дата открытия</label>
                   <input id="data_create" type="date">
-                </p>
+                </div>
               </fieldset>
               <fieldset>
                 <legend>Специальность</legend>
-                <p class="field">
+                <div class="field">
                   <label for="prof">Специальность</label>
                   <select id="prof">
                     <option>Парикмахер</option>
                     <option>Портной</option>
                   </select>
-                </p>
-                <p class="field">
+                </div>
+                <div class="field">
                   <label for="#kurs">Курсовое обучение </label>
                   <!-- уточнить-->
                   <input id="kurs" type="text">
-                </p>
-                <p class="field">
+                </div>
+                <div class="field">
                   <label for="duration">Длительность обучения</label>
                   <input id="durartion" type="number">
-                </p>
+                </div>
               </fieldset>
               <fieldset>
                 <legend>Общие данные</legend>
-                <p class="field">
+                <div class="field">
                   <label for="name">Имя</label>
                   <input id="name" type="text">
-                </p>
-                <p class="field">
+                </div>
+                <div class="field">
                   <label for="soname">Фамилия</label>
                   <input id="soname" type="text">
-                </p>
-                <p class="field">
+                </div>
+                <div class="field">
                   <label for="second_name">Отчество</label>
                   <input id="second_name" type="text">
-                </p>
-                <p class="field">
+                </div>
+                <div class="field">
                   <label for="date_birth">Дата рождения</label>
                   <input id="date_birth" type="date">
-                </p>
-                <p class="field">
+                </div>
+                <div class="field">
                   <label for="pasport">Серия и номер паспорта</label>
                   <input id="pasport" type="text">
-                </p>
-                <p class="field">
+                </div>
+                <div class="field">
                   <label for="pasport_where">Где и кем выдан</label>
                   <input id="pasport_where" type="text">
-                </p>
-                <p class="field">
+                </div>
+                <div class="field">
                   <label for="inn">ИНН</label>
                   <input id="inn" type="number">
-                </p>
-                <p class="field">
+                </div>
+                <div class="field">
                   <label for="phone">Телефон</label>
                   <input id="phone" type="text">
-                </p>
+                </div>
               </fieldset>
               <fieldset>
                 <legend>Образование</legend>
-                <p class="field">
+                <div class="field">
                   <label for="school">Школа</label>
                   <input id="school" type="text">
-                </p>
-                <p class="field">
+                </div>
+                <div class="field">
                   <label for="year_end">Год окончания</label>
                   <input id="year_end" type="number">
-                </p>
-                <p class="field">
+                </div>
+                <div class="field">
                   <label for="other_edu">Другое образование</label>
                   <input id="other_edu" type="checkbox">
-                </p>
+                </div>
+                <div class="field" id="other_edu_field">
+                  <label for="other_edu">Укажите заведение</label>
+                  <input id="other_edu" type="text">
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Адрес</legend>
+                <div class="field">
+                  <label for="adres_reg">Адрес регистрации</label>
+                  <input id="adres_reg" type="text">
+                </div>
+                <div class="field"> 
+                  <label for="adres_match">Совпадают</label>
+                  <input id="adres_match" type="checkbox">
+                </div>
+                <div class="field" id="adres_fact_fied">
+                  <label for="adres_fact">Адрес проживания</label>
+                  <input id="adres_fact" type="text">
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Доп данные</legend>
+                <div class="field"> 
+                  <label for="preivileges">Льготы</label>
+                  <input id="preivileges" type="text">
+                </div>
+                <div class="field"> 
+                  <label for="sport">Группа физкультуры</label>
+                  <select id="sport">
+                    <option>Основная (1)</option>
+                    <option>Подготовительная (2)</option>
+                    <option>Специальная (3)</option>
+                  </select>
+                </div>
+                <div class="field"> 
+                  <label>Общежитие</label>
+                  <div class="dop_field">
+                    <label for="hostel_yesl">Да</label>
+                    <input id="hostel_yes" type="radio" name="hostel">
+                    <label for="hostel_no">Нет</label>
+                    <input id="hostel_no" type="radio" name="hostel">
+                  </div>
+                </div>
+                <div class="field"> 
+                  <label for="hobbie">Увлечения</label>
+                  <textarea id="hobbie" placeholder="Интересы, предпочтения и т.д."></textarea>
+                </div>
               </fieldset>
             </form>
             <script src="../script/jquery-3.6.0.min.js"></script>

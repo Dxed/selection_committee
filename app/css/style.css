@@ -8,6 +8,7 @@ html{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	transition: 0.5s;
 }
 
 
@@ -19,7 +20,7 @@ a, button{
 	font-size: 2vw;
 	font-weight: bold;
 	border: 3px solid #444444;
-	transition: 0.5s;
+
 	text-decoration: none;
 	color: #F20606;
 }
@@ -104,15 +105,27 @@ footer{
 label{
 	font-size: 1.5vw;
 }
-input, select, input[type=checkbox] {
+
+
+input, select, textarea {
 	font-size: 1.5vw;
 	border-radius: 1vw;
 	border: 3px solid black;
 	outline: none;
 	padding: 1% 4%;
 	width: 60%;
+	resize: none;
 	
 }
+input[type=checkbox], input[type=radio]{
+	width: 50px;
+	height: 50px;
+	border-radius: 1vw;
+	border: 3px solid black;
+	outline: none;
+	padding: 1% 4%;
+}
+
 button{
 	display: block;
 	margin: 0 auto;
@@ -134,7 +147,18 @@ legend{
 	align-items: center;
 	margin: 2% 0;
 }
+.dop_field{
+	width: 60%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
 /*стили для формы входа*/
 .sign_in_form fieldset{
 	border: none;
+}
+
+/*отдельные стили*/
+#other_edu_field{
+	display: none;
 }
