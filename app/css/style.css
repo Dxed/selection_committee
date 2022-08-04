@@ -32,8 +32,8 @@ a:hover, button:hover{
 
 }
 .container{
-	max-width: 1680px;
-	width: 80%;
+	max-width: 1600px;
+	width: 60%;
 	margin: 0 auto;
 }
 img { 
@@ -44,6 +44,8 @@ img {
 /*стили для шапки*/
 header{
 	background-color: #F2F2F2;
+	position: relative;
+	top: 0;
 	
 }
 .header_content{
@@ -51,7 +53,7 @@ header{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 4% 0;
+	padding: 2%;
 }
 
 .header_content h1{
@@ -59,7 +61,14 @@ header{
 	font-weight: normal;
 }
 
-
+.menu_a{
+	width: 50px;
+	transition: 0.01s;
+}
+.menu_a:hover{
+	cursor: pointer;
+	fill: #F20606;
+}
 /*стили для секции входа*/
 .sign_in{
 	margin-top: 5%;
@@ -103,7 +112,7 @@ footer{
 
 /*стили для полей*/
 label{
-	font-size: 1.5vw;
+	font-size: 1vw;
 }
 
 
@@ -113,17 +122,18 @@ input, select, textarea {
 	border: 3px solid black;
 	outline: none;
 	padding: 1% 4%;
-	width: 60%;
+	width: 50%;
 	resize: none;
 	
 }
 input[type=checkbox], input[type=radio]{
-	width: 50px;
+	width: fit-content;
 	height: 50px;
 	border-radius: 1vw;
 	border: 3px solid black;
 	outline: none;
 	padding: 1% 4%;
+	transform: scale(3.0) translateX(-50%);
 }
 
 button{
@@ -136,10 +146,15 @@ fieldset{
 	border-radius: 1vw;
 	padding: 2%;
 }
-legend{
+legend, p.parent {
 	font-size: 1.5vw;
 	font-weight: bold;
 	color: #F20606;
+}
+p.parent{
+	border-bottom: 2px solid black;
+	width: fit-content;
+	padding: 1% 5% 0 0.5%;
 }
 .field{
 	display: flex;
@@ -148,7 +163,7 @@ legend{
 	margin: 2% 0;
 }
 .dop_field{
-	width: 60%;
+	width: 50%;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
@@ -161,4 +176,45 @@ legend{
 /*отдельные стили*/
 #other_edu_field{
 	display: none;
+}
+
+/*стили для панели администратора*/
+.admin_panel{
+	position: fixed;
+	left: -20%;
+	top: 0;
+	height: 100%;
+	background-color: #444444;
+	padding: 2% 1%;
+	width: 20%;
+	
+	
+}
+.admin_panel h2{
+	font-size: 1.5vw;
+	font-weight: bold;
+	color: #F20606;
+	margin: 2% 0.5%;
+}
+.admin_panel ul{
+	list-style: none;
+	padding: 0;
+}
+.admin_panel a{
+	color: #ffff;
+	display: block;
+	width: 100%;
+	font-size: 1vw;
+}
+.exit_a{
+	width: 35px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin: 0 2%;
+	transition: 0.01s;
+}
+.exit_a:hover{
+	cursor: pointer;
+	fill: #F20606;
 }

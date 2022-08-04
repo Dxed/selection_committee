@@ -1,6 +1,8 @@
 extends ./includes/template.pug
 block variables
 	-var title="Добавление нового студента"
+mixin field_m()
+	p
 block main_form
 	form.main_form
 		fieldset
@@ -28,11 +30,11 @@ block main_form
 		fieldset
 			legend Общие данные
 			div.field
-				label(for="name") Имя
-				input#name(type="text")
-			div.field
 				label(for="soname") Фамилия
 				input#soname(type="text")
+			div.field
+				label(for="name") Имя
+				input#name(type="text")
 			div.field
 				label(for="second_name") Отчество
 				input#second_name(type="text")
@@ -41,7 +43,7 @@ block main_form
 				input#date_birth(type="date")
 			div.field
 				label(for="pasport") Серия и номер паспорта
-				input#pasport(type="text")
+				input#pasport.doc(type="text")
 			div.field
 				label(for="pasport_where") Где и кем выдан
 				input#pasport_where(type="text")
@@ -49,8 +51,8 @@ block main_form
 				label(for="inn") ИНН
 				input#inn(type="number")
 			div.field
-				label(for="phone") Телефон
-				input#phone(type="text")
+				label(for="s_phone") Телефон
+				input#s_phone.phone(type="text")
 		fieldset
 			legend Образование
 			div.field
@@ -97,9 +99,63 @@ block main_form
 			div.field 
 				label(for="hobbie") Увлечения
 				textarea#hobbie(placeholder="Интересы, предпочтения и т.д.")
+		fieldset 
+			legend Родители
+			p.parent Мать
+			div.field 
+				label(for="soname_m") Фамилия
+				input#soname_m(type="text")
+			div.field 
+				label(for="name_m") Имя
+				input#name_m(type="text")
+			div.field 
+				label(for="second_name_m") Отчество
+				input#second_name_m(type="text")
+			div.field 
+				label(for="m_phone") Номер телефона
+				input#m_phone.phone(type="text")
+			div.field
+				label(for="m_pasport") Серия и номер паспорта
+				input#m_pasport.doc(type="text")
+			div.field
+				label(for="m_pasport_where") Где и кем выдан
+				input#m_pasport_where(type="text")
+			div.field
+				label(for="m_adres") Фактическое место проживания
+				input#m_adres(type="text")
+			div.field
+				label(for="m_work") Место работы
+				input#m_work(type="text")
+			p.parent Отец
+			div.field 
+				label(for="soname_f") Фамилия
+				input#soname_f(type="text")
+			div.field 
+				label(for="name_f") Имя
+				input#name_f(type="text")
+			div.field 
+				label(for="second_name_f") Отчество
+				input#second_name_f(type="text")
+			div.field 
+				label(for="f_phone") Номер телефона
+				input#f_phone.phone(type="text")
+			div.field
+				label(for="f_pasport") Серия и номер паспорта
+				input#f_pasport.doc(type="text")
+			div.field
+				label(for="f_pasport_where") Где и кем выдан
+				input#f_pasport_where(type="text")
+			div.field
+				label(for="f_adres") Фактическое место проживания
+				input#f_adres(type="text")
+			div.field
+				label(for="f_work") Место работы
+				input#f_work(type="text")
+
+
+
 
 
 	script(src="../script/jquery-3.6.0.min.js")
 	script(type="text/javascript",src="../script/jquery.maskedinput-1.2.2.js")
 	script(src="../script/mask-script.js")
-	script(src="../script/main.js")

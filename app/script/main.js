@@ -18,3 +18,16 @@ $('#other_edu').click(()=>{
 $('#adres_match').click(()=>{
     toggler($("#adres_fact_fied"),$('#adres_match'),"none","flex");
 });
+$('.menu_a').click(()=>{
+    $('.admin_panel').animate(
+    {
+        left:0
+    },100,"linear")
+});
+
+$('.exit_a').click(()=>{
+    $('.admin_panel').animate(
+    {
+        left:"-20%"
+    },100,"linear")
+});
