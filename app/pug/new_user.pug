@@ -1,0 +1,30 @@
+extends ./includes/template.pug
+block variables
+	-var title="Добавить нового пользователя"
+block main_form
+	form.main_form
+		fieldset
+			legend Новый пользователь
+			div.field
+				label(for="login") Логин
+				input#login(type='text')
+			div.field
+				label(for="pass") Пароль
+				input#pass(type='text')
+			div.field
+				label(for="sorname_user") Фамилия 
+				input#sorname_user(type='text')
+			div.field 
+				label(for="name_user") Имя
+				input#name_user(type='text')
+			div.field
+				label(for="second_name_user") Отчество
+				input#second_name_user(type='text')
+			div.field
+				label Администратор
+				div.dop_field
+					label(for="admin_yes") Да
+					input#admin_yes(type="radio", name="hostel")
+					label(for="admin_no") Нет
+					input#admin_no(type="radio", name="hostel")
+		button#new_user Добавить пользователя

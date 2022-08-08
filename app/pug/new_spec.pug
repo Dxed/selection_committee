@@ -1,0 +1,14 @@
+extends ./includes/template.pug
+block variables
+	-var title="Добавить новую специальность"
+block main_form
+	form.main_form
+		fieldset
+			legend Новая специальность
+			div.field
+				label(for="id_spec") Код специальности
+				input#id_spec(type='text')
+			div.field
+				label(for="name_spec") Название специальности
+				input#name_spec(type='text')
+		button#new_user Добавить специальность

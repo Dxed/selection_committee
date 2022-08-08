@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/media.css">
+    <link rel="stylesheet" href="../css/simplePagination.css">
     <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
   </head>
   <body>
     <header>
       <div class="header_content">
-        <svg class="menu_a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-          <path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"></path>
-        </svg>
+        <div class="menu_a_wrap">
+          <svg class="menu_a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"></path>
+          </svg>
+        </div>
         <h1> Добавление нового студента</h1><img src="../img/logo.png">
       </div>
     </header>
@@ -24,9 +27,8 @@
         </svg>
         <h2>Администрирование</h2>
         <ul>
-          <li> <a href="#">Добавить пользователя</a></li>
-          <li> <a href="#">Удалить пользователя</a></li>
-          <li> <a href="#">Редактировать список</a></li>
+          <li> <a href="admin_user.html">Редактирование пользователей</a></li>
+          <li> <a href="admin_spec.html">Редактирование специальностей</a></li>
         </ul>
       </div>
       <section class="sign_in">
@@ -42,211 +44,226 @@
           <div class="container">
             <form class="main_form">
               <fieldset>
-                <legend>Личное дело</legend>
-                <div class="field">
-                  <label for="id">Личное дело №</label>
-                  <input id="id" type="number">
-                </div>
-                <div class="field">
-                  <label for="data_create">Дата открытия</label>
-                  <input id="data_create" type="date">
-                </div>
-              </fieldset>
-              <fieldset>
-                <legend>Специальность</legend>
-                <div class="field">
-                  <label for="prof">Специальность</label>
-                  <select id="prof">
-                    <option>Парикмахер</option>
-                    <option>Портной</option>
-                  </select>
-                </div>
-                <div class="field">
-                  <label for="#kurs">Курсовое обучение </label>
-                  <!-- уточнить-->
-                  <input id="kurs" type="text">
-                </div>
-                <div class="field">
-                  <label for="duration">Длительность обучения</label>
-                  <input id="durartion" type="number">
-                </div>
-              </fieldset>
-              <fieldset>
-                <legend>Общие данные</legend>
-                <div class="field">
-                  <label for="soname">Фамилия</label>
-                  <input id="soname" type="text">
-                </div>
-                <div class="field">
-                  <label for="name">Имя</label>
-                  <input id="name" type="text">
-                </div>
-                <div class="field">
-                  <label for="second_name">Отчество</label>
-                  <input id="second_name" type="text">
-                </div>
-                <div class="field">
-                  <label for="date_birth">Дата рождения</label>
-                  <input id="date_birth" type="date">
-                </div>
-                <div class="field">
-                  <label for="pasport">Серия и номер паспорта</label>
-                  <input class="doc" id="pasport" type="text">
-                </div>
-                <div class="field">
-                  <label for="pasport_where">Где и кем выдан</label>
-                  <input id="pasport_where" type="text">
-                </div>
-                <div class="field">
-                  <label for="inn">ИНН</label>
-                  <input id="inn" type="number">
-                </div>
-                <div class="field">
-                  <label for="s_phone">Телефон</label>
-                  <input class="phone" id="s_phone" type="text">
-                </div>
-              </fieldset>
-              <fieldset>
-                <legend>Образование</legend>
-                <div class="field">
-                  <label for="school">Школа</label>
-                  <input id="school" type="text">
-                </div>
-                <div class="field">
-                  <label for="year_end">Год окончания</label>
-                  <input id="year_end" type="number">
-                </div>
-                <div class="field">
-                  <label for="other_edu">Другое образование</label>
-                  <input id="other_edu" type="checkbox">
-                </div>
-                <div class="field" id="other_edu_field">
-                  <label for="other_edu">Укажите заведение</label>
-                  <input id="other_edu" type="text">
-                </div>
-              </fieldset>
-              <fieldset>
-                <legend>Адрес</legend>
-                <div class="field">
-                  <label for="adres_reg">Адрес регистрации</label>
-                  <input id="adres_reg" type="text">
-                </div>
-                <div class="field"> 
-                  <label for="adres_match">Совпадают</label>
-                  <input id="adres_match" type="checkbox">
-                </div>
-                <div class="field" id="adres_fact_fied">
-                  <label for="adres_fact">Адрес проживания</label>
-                  <input id="adres_fact" type="text">
-                </div>
-              </fieldset>
-              <fieldset>
-                <legend>Доп данные</legend>
-                <div class="field"> 
-                  <label for="preivileges">Льготы</label>
-                  <input id="preivileges" type="text">
-                </div>
-                <div class="field"> 
-                  <label for="sport">Группа физкультуры</label>
-                  <select id="sport">
-                    <option>Основная (1)</option>
-                    <option>Подготовительная (2)</option>
-                    <option>Специальная (3)</option>
-                  </select>
-                </div>
-                <div class="field"> 
-                  <label>Общежитие</label>
-                  <div class="dop_field">
-                    <label for="hostel_yesl">Да</label>
-                    <input id="hostel_yes" type="radio" name="hostel">
-                    <label for="hostel_no">Нет</label>
-                    <input id="hostel_no" type="radio" name="hostel">
+                <legend> <img class="plus" src="../img/circle-plus-solid.svg">Личное дело</legend>
+                <div class="field_cont">
+                  <div class="field">
+                    <label for="id">Личное дело №</label>
+                    <input id="id" type="number">
+                  </div>
+                  <div class="field">
+                    <label for="data_create">Дата открытия</label>
+                    <input id="data_create" type="date">
                   </div>
                 </div>
-                <div class="field"> 
-                  <label for="hobbie">Увлечения</label>
-                  <textarea id="hobbie" placeholder="Интересы, предпочтения и т.д."></textarea>
+              </fieldset>
+              <fieldset>
+                <legend><img class="plus" src="../img/circle-plus-solid.svg">Специальность</legend>
+                <div class="field_cont">
+                  <div class="field">
+                    <label for="prof">Специальность</label>
+                    <select id="prof">
+                      <option>Парикмахер</option>
+                      <option>Портной</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label for="#kurs">Курсовое обучение </label>
+                    <!-- уточнить-->
+                    <input id="kurs" type="text">
+                  </div>
+                  <div class="field">
+                    <label for="duration">Длительность обучения</label>
+                    <input id="durartion" type="number">
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend><img class="plus" src="../img/circle-plus-solid.svg">Общие данные</legend>
+                <div class="field_cont">
+                  <div class="field">
+                    <label for="soname">Фамилия</label>
+                    <input id="soname" type="text">
+                  </div>
+                  <div class="field">
+                    <label for="name">Имя</label>
+                    <input id="name" type="text">
+                  </div>
+                  <div class="field">
+                    <label for="second_name">Отчество</label>
+                    <input id="second_name" type="text">
+                  </div>
+                  <div class="field">
+                    <label for="date_birth">Дата рождения</label>
+                    <input id="date_birth" type="date">
+                  </div>
+                  <div class="field">
+                    <label for="pasport">Серия и номер паспорта</label>
+                    <input class="doc" id="pasport" type="text">
+                  </div>
+                  <div class="field">
+                    <label for="pasport_where">Где и кем выдан</label>
+                    <input id="pasport_where" type="text">
+                  </div>
+                  <div class="field">
+                    <label for="inn">ИНН</label>
+                    <input id="inn" type="number">
+                  </div>
+                  <div class="field">
+                    <label for="s_phone">Телефон</label>
+                    <input class="phone" id="s_phone" type="text">
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend><img class="plus" src="../img/circle-plus-solid.svg">Образование</legend>
+                <div class="field_cont">
+                  <div class="field">
+                    <label for="school">Школа</label>
+                    <input id="school" type="text">
+                  </div>
+                  <div class="field">
+                    <label for="year_end">Год окончания</label>
+                    <input id="year_end" type="number">
+                  </div>
+                  <div class="field">
+                    <label for="other_edu">Другое образование</label>
+                    <input id="other_edu" type="checkbox">
+                  </div>
+                  <div class="field" id="other_edu_field">
+                    <label for="other_edu">Укажите заведение</label>
+                    <input id="other_edu" type="text">
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend><img class="plus" src="../img/circle-plus-solid.svg">Адрес</legend>
+                <div class="field_cont">
+                  <div class="field">
+                    <label for="adres_reg">Адрес регистрации</label>
+                    <input id="adres_reg" type="text">
+                  </div>
+                  <div class="field"> 
+                    <label for="adres_match">Совпадают</label>
+                    <input id="adres_match" type="checkbox">
+                  </div>
+                  <div class="field" id="adres_fact_fied">
+                    <label for="adres_fact">Адрес проживания</label>
+                    <input id="adres_fact" type="text">
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend><img class="plus" src="../img/circle-plus-solid.svg">Доп данные</legend>
+                <div class="field_cont">
+                  <div class="field"> 
+                    <label for="preivileges">Льготы</label>
+                    <input id="preivileges" type="text">
+                  </div>
+                  <div class="field"> 
+                    <label for="sport">Группа физкультуры</label>
+                    <select id="sport">
+                      <option>Основная (1)</option>
+                      <option>Подготовительная (2)</option>
+                      <option>Специальная (3)</option>
+                    </select>
+                  </div>
+                  <div class="field"> 
+                    <label>Общежитие</label>
+                    <div class="dop_field">
+                      <label for="hostel_yesl">Да</label>
+                      <input id="hostel_yes" type="radio" name="hostel">
+                      <label for="hostel_no">Нет</label>
+                      <input id="hostel_no" type="radio" name="hostel">
+                    </div>
+                  </div>
+                  <div class="field"> 
+                    <label for="hobbie">Увлечения</label>
+                    <textarea id="hobbie" placeholder="Интересы, предпочтения и т.д."></textarea>
+                  </div>
                 </div>
               </fieldset>
               <fieldset> 
-                <legend>Родители</legend>
-                <p class="parent">Мать</p>
-                <div class="field"> 
-                  <label for="soname_m">Фамилия</label>
-                  <input id="soname_m" type="text">
-                </div>
-                <div class="field"> 
-                  <label for="name_m">Имя</label>
-                  <input id="name_m" type="text">
-                </div>
-                <div class="field"> 
-                  <label for="second_name_m">Отчество</label>
-                  <input id="second_name_m" type="text">
-                </div>
-                <div class="field"> 
-                  <label for="m_phone">Номер телефона</label>
-                  <input class="phone" id="m_phone" type="text">
-                </div>
-                <div class="field">
-                  <label for="m_pasport">Серия и номер паспорта</label>
-                  <input class="doc" id="m_pasport" type="text">
-                </div>
-                <div class="field">
-                  <label for="m_pasport_where">Где и кем выдан</label>
-                  <input id="m_pasport_where" type="text">
-                </div>
-                <div class="field">
-                  <label for="m_adres">Фактическое место проживания</label>
-                  <input id="m_adres" type="text">
-                </div>
-                <div class="field">
-                  <label for="m_work">Место работы</label>
-                  <input id="m_work" type="text">
-                </div>
-                <p class="parent">Отец</p>
-                <div class="field"> 
-                  <label for="soname_f">Фамилия</label>
-                  <input id="soname_f" type="text">
-                </div>
-                <div class="field"> 
-                  <label for="name_f">Имя</label>
-                  <input id="name_f" type="text">
-                </div>
-                <div class="field"> 
-                  <label for="second_name_f">Отчество</label>
-                  <input id="second_name_f" type="text">
-                </div>
-                <div class="field"> 
-                  <label for="f_phone">Номер телефона</label>
-                  <input class="phone" id="f_phone" type="text">
-                </div>
-                <div class="field">
-                  <label for="f_pasport">Серия и номер паспорта</label>
-                  <input class="doc" id="f_pasport" type="text">
-                </div>
-                <div class="field">
-                  <label for="f_pasport_where">Где и кем выдан</label>
-                  <input id="f_pasport_where" type="text">
-                </div>
-                <div class="field">
-                  <label for="f_adres">Фактическое место проживания</label>
-                  <input id="f_adres" type="text">
-                </div>
-                <div class="field">
-                  <label for="f_work">Место работы</label>
-                  <input id="f_work" type="text">
+                <legend><img class="plus" src="../img/circle-plus-solid.svg">Родители</legend>
+                <div class="field_cont">
+                  <p class="parent">Мать</p>
+                  <div class="field"> 
+                    <label for="soname_m">Фамилия</label>
+                    <input id="soname_m" type="text">
+                  </div>
+                  <div class="field"> 
+                    <label for="name_m">Имя</label>
+                    <input id="name_m" type="text">
+                  </div>
+                  <div class="field"> 
+                    <label for="second_name_m">Отчество</label>
+                    <input id="second_name_m" type="text">
+                  </div>
+                  <div class="field"> 
+                    <label for="m_phone">Номер телефона</label>
+                    <input class="phone" id="m_phone" type="text">
+                  </div>
+                  <div class="field">
+                    <label for="m_pasport">Серия и номер паспорта</label>
+                    <input class="doc" id="m_pasport" type="text">
+                  </div>
+                  <div class="field">
+                    <label for="m_pasport_where">Где и кем выдан</label>
+                    <input id="m_pasport_where" type="text">
+                  </div>
+                  <div class="field">
+                    <label for="m_adres">Фактическое место проживания</label>
+                    <input id="m_adres" type="text">
+                  </div>
+                  <div class="field">
+                    <label for="m_work">Место работы</label>
+                    <input id="m_work" type="text">
+                  </div>
+                  <p class="parent">Отец</p>
+                  <div class="field"> 
+                    <label for="soname_f">Фамилия</label>
+                    <input id="soname_f" type="text">
+                  </div>
+                  <div class="field"> 
+                    <label for="name_f">Имя</label>
+                    <input id="name_f" type="text">
+                  </div>
+                  <div class="field"> 
+                    <label for="second_name_f">Отчество</label>
+                    <input id="second_name_f" type="text">
+                  </div>
+                  <div class="field"> 
+                    <label for="f_phone">Номер телефона</label>
+                    <input class="phone" id="f_phone" type="text">
+                  </div>
+                  <div class="field">
+                    <label for="f_pasport">Серия и номер паспорта</label>
+                    <input class="doc" id="f_pasport" type="text">
+                  </div>
+                  <div class="field">
+                    <label for="f_pasport_where">Где и кем выдан</label>
+                    <input id="f_pasport_where" type="text">
+                  </div>
+                  <div class="field">
+                    <label for="f_adres">Фактическое место проживания</label>
+                    <input id="f_adres" type="text">
+                  </div>
+                  <div class="field">
+                    <label for="f_work">Место работы</label>
+                    <input id="f_work" type="text">
+                  </div>
                 </div>
               </fieldset>
+              <button id="new_student">Добавить</button>
             </form>
-            <script src="../script/jquery-3.6.0.min.js"></script>
-            <script type="text/javascript" src="../script/jquery.maskedinput-1.2.2.js"></script>
-            <script src="../script/mask-script.js"></script>
           </div>
         </section>
       </section>
     </main>
-    <footer>
-      <script src="../script/main.js"></script>
-    </footer>
+    <footer></footer>
+    <script src="../script/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../script/jquery.maskedinput-1.2.2.js"></script>
+    <script src="../script/mask-script.js"></script>
+    <script src="../script/jquery.simplePagination.js"></script>
+    <script src="../script/main.js"></script>
   </body>
 </html>

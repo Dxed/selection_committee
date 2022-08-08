@@ -1,0 +1,27 @@
+extends ./includes/template.pug
+block variables
+	-var title="Редактирование специальностей"
+
+block main_form
+	table
+		thead
+			tr 
+				th Код специальности
+				th Специальность
+		tbody
+			tr
+				td 0
+				td Парикмахер
+			tr
+				td 1
+				td Портной
+			
+	div.admin_but
+		button#del Удалить
+		button#edit Редактировать
+	a.new_user(href="new_spec.html") Добавить специальность
+	div#light-pagination
+
+
+
+

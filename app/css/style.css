@@ -1,5 +1,10 @@
 /*общие стили*/
 @import font.css;
+:root{
+	--bg-color-1: #F2F2F2;
+	--bg-color-2: #444444;
+	--font-color: #F20606;
+}
 html{
 	font-size: 16px;
 }
@@ -14,26 +19,26 @@ html{
 
 
 a, button{
-	background-color:  #444444;
+	background-color:  var(--bg-color-2);
 	padding: 2% 10%;
 	border-radius: 2vh;
 	font-size: 2vw;
 	font-weight: bold;
-	border: 3px solid #444444;
+	border: 3px solid var(--bg-color-2);
 
 	text-decoration: none;
-	color: #F20606;
+	color:var(--font-color);
 }
 
 a:hover, button:hover{
-	border-color: #F20606;
+	border-color: var(--font-color);
 	cursor: pointer;
 	background-color: #242424;
 
 }
 .container{
 	max-width: 1600px;
-	width: 60%;
+	width: 80%;
 	margin: 0 auto;
 }
 img { 
@@ -43,7 +48,7 @@ img {
 
 /*стили для шапки*/
 header{
-	background-color: #F2F2F2;
+	background-color: var(--bg-color-1);
 	position: relative;
 	top: 0;
 	
@@ -55,19 +60,26 @@ header{
 	align-items: center;
 	padding: 2%;
 }
+.header_content *{
+	width: 20%;
+	text-align: center;
+}
 
 .header_content h1{
 	font-size: 3vw;
 	font-weight: normal;
+	flex-grow: 1;
 }
-
+.menu_a_wrap{
+	text-align: left;
+}
 .menu_a{
 	width: 50px;
 	transition: 0.01s;
 }
 .menu_a:hover{
 	cursor: pointer;
-	fill: #F20606;
+	fill: var(--font-color);
 }
 /*стили для секции входа*/
 .sign_in{
@@ -90,10 +102,10 @@ header{
 
 /*стили для формы*/
 .main_form{
-	background-color: #F2F2F2;
-	border-radius: 5vw;
+	background-color: var(--bg-color-1);
+	border-radius: 2vw;
 	border: 5px solid black;
-	padding: 5% 8%;
+	padding: 2% 4%;
 	margin: 5%;
 }
 .main_form a{
@@ -107,7 +119,7 @@ header{
 /*стили для подвала сайта*/
 footer{
 	height: 120px;
-	background-color: #444444;
+	background-color: var(--bg-color-2);
 }
 
 /*стили для полей*/
@@ -141,20 +153,38 @@ button{
 	margin: 0 auto;
 }
 fieldset{
-	margin:5% 0;
+	margin:2% 0;
 	border: 2px solid black;
 	border-radius: 1vw;
 	padding: 2%;
+
 }
+
 legend, p.parent {
 	font-size: 1.5vw;
 	font-weight: bold;
-	color: #F20606;
+	color: var(--font-color);
+	display: flex;
+	align-items: center;
+}
+.plus{
+	width: 30px;
+	margin: 0 10px;
+	border-radius: 50%;
+	transition: 0.2s;
+
+}
+.plus:hover{
+	cursor: pointer;
+	background-color: var(--font-color);
 }
 p.parent{
 	border-bottom: 2px solid black;
 	width: fit-content;
 	padding: 1% 5% 0 0.5%;
+}
+.field_cont{
+	display: none;
 }
 .field{
 	display: flex;
@@ -184,7 +214,7 @@ p.parent{
 	left: -20%;
 	top: 0;
 	height: 100%;
-	background-color: #444444;
+	background-color: var(--bg-color-2);
 	padding: 2% 1%;
 	width: 20%;
 	
@@ -193,7 +223,7 @@ p.parent{
 .admin_panel h2{
 	font-size: 1.5vw;
 	font-weight: bold;
-	color: #F20606;
+	color: var(--font-color);
 	margin: 2% 0.5%;
 }
 .admin_panel ul{
@@ -216,5 +246,49 @@ p.parent{
 }
 .exit_a:hover{
 	cursor: pointer;
-	fill: #F20606;
+	fill: var(--font-color);
+}
+
+/*стили для админской панели*/
+table{
+	border-collapse: collapse;
+	text-align: center;
+	width: 100%;
+	margin: 5% auto;
+}
+th,td{
+	border: 1px solid black;
+	font-size: 1vw;
+	padding: 1%;
+}
+thead{
+	background-color: var(--bg-color-2);
+	color: var(--font-color);
+}
+tbody tr{
+	transition: 0;
+}
+tbody tr:hover{
+	background-color: var(--bg-color-1);
+	cursor: pointer;
+}
+tbody tr:active{
+	background-color: var(--bg-color-2);
+	color:  var(--font-color);
+}
+
+.admin_but{
+	display: none;
+	width: 60%;
+	margin: auto;
+	justify-content: space-between;
+	margin-bottom: 5%;
+}
+.new_user{
+	display: block;
+	font-size: 1.5vw;
+	margin: auto;
+	width: 40%;
+	text-align: center;
+	padding: 2% 5%;
 }

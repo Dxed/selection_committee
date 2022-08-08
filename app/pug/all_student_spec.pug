@@ -1,0 +1,45 @@
+extends ./includes/template.pug
+block variables
+	-var title="Просмотр базы студентов"
+
+block main_form
+	form.main_form
+		fieldset
+			legend Поиск
+			div.field
+				label Укажите специальность
+				input(type="text")
+			div.field
+				label После какого класса 
+				div.dop_field
+					label(for="class9") 9
+					input#class9(type="radio", name="year")
+					label(for="class11") 11
+					input#class11(type="radio", name="year")
+	table
+		thead
+			tr 
+				th Код специальности
+				th Специальность
+				th ФИО студента
+				th После какого класса
+		tbody
+			tr
+				td 0
+				td Парикмахер
+				td Сидоренко А.А
+				td 9
+			tr
+				td 1
+				td Портной
+				td Сидорчук И.П.
+				td 11
+	div.admin_but
+		button#del Удалить
+		button#edit Редактировать
+	a.new_user(href="new_student.html") Добавить cтудента
+	div#light-pagination
+
+
+
+

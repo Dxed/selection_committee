@@ -1,0 +1,32 @@
+extends ./includes/template.pug
+block variables
+	-var title="Редактирование пользователей"
+
+block main_form
+	table
+		thead
+			tr 
+				th Логин
+				th ФИО
+				th Пароль
+				th Администратор (да/нет)
+		tbody
+			tr
+				td ivan
+				td Иван Иванов Иванович
+				td qwerty
+				td нет
+			tr
+				td anton
+				td Антон Антонович Антонов
+				td qwerty
+				td да
+	div.admin_but
+		button#del Удалить
+		button#edit Редактировать
+	a.new_user(href="new_user.html") Добавить пользователя
+	div#light-pagination
+
+
+
+
